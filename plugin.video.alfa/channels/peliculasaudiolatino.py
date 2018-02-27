@@ -177,7 +177,7 @@ def findvideos(item):
     for servidor, idioma, calidad, scrapedurl in matches:
         url = scrapedurl
         server = servertools.get_server_name(servidor)
-        title = "Enlace encontrado en %s" % (server)
+        title = "Ver en "+servidor+" ["+idioma+"]["+calidad+"]"
         if idioma == 'Ingles Subtitulado':
             idioma = 'vose'
         itemlist.append(Item(channel=item.channel, action="play", title=title, fulltitle=item.fulltitle, url=url,
